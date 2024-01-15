@@ -1,9 +1,13 @@
+import Cabecalho from '../../components/Cabecalho/Cabecalho'
+import Rodape from '../../components/Rodape/Rodape'
 import styles from './Inicio.module.css'
 
 export default function Inicio() {
     return (
         <>
-            <h1>Olá, como vai?</h1>
+            <Cabecalho />
+            <div style={{height: '85vh'}}></div>
+            <Rodape />
         </>
     )
 }

@@ -1,0 +1,15 @@
+.rodape {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--color1);
+   padding: 2rem
+}
+
+.rodape__wrapper {
+    text-align: center;
+    color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
