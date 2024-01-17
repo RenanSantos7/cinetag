@@ -1,4 +1,3 @@
-import styles from './Inicio.module.css'
 import Banner from '../../components/Banner/Banner'
 import Titulo from '../../components/Titulo/Titulo'
 import Card from '../../components/Card/Card'

@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-import styles from './Favoritos.module.css'
 import { FilmesContext } from '../../context/FilmesContext'
 import Banner from '../../components/Banner/Banner'
 import Card from '../../components/Card/Card'

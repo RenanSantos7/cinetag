@@ -1,20 +1,20 @@
 import styles from './Card.module.css'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart as iconeFavoritar } from '@fortawesome/free-regular-svg-icons'
 import { faHeart as iconeDesfavoritar } from '@fortawesome/free-solid-svg-icons'
 import { FilmesContext } from '../../context/FilmesContext'
 
-export default function Card({video}) {
-
-    const [ehFavorito, setEhFavorito] = useState(false)
+export default function Card({ video }) {
     const { favoritos, setFavoritos } = useContext(FilmesContext)
+    const [ehFavorito, setEhFavorito] = useState(favoritos.includes(video))
 
     function mudarFavorito() {
         setEhFavorito(!ehFavorito)
+        
         if (favoritos.includes(video)) {
             setFavoritos(prev => prev.filter(
-                favoritos => favorito.id !== video.id
+                favorito => favorito.id !== video.id
             ))
         } else {
             setFavoritos([...favoritos, video])
