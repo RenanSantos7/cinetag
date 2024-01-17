@@ -1,14 +1,25 @@
-import './App.css'
+import Favoritos from './pages/Favoritos/Favoritos'
 import Inicio from './pages/Inicio/Inicio'
+import Cabecalho from './components/Cabecalho/Cabecalho'
+import Rodape from './components/Rodape/Rodape'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import PageContainer from './components/PageContainer/PageContainer'
+import { FilmesProvider } from './context/FilmesContext'
 
 export default function AppRouter() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Inicio />} />
-        </Routes>
+        <Cabecalho />
+        <PageContainer>
+          <FilmesProvider>
+            <Routes>
+              <Route path='/' element={<Inicio />} />
+              <Route path='/favoritos' element={<Favoritos />} />
+            </Routes>
+          </FilmesProvider>
+        </PageContainer>
+        <Rodape />
       </BrowserRouter>
     </>
   )

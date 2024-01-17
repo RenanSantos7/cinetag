@@ -1,0 +1,23 @@
+.container {
+    padding-bottom: 1em;
+    margin-top: .5em;
+    width: 282px;
+    background-color: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container h2, .favoritar {
+    padding-inline: 1em;
+}
+
+.container h2 {
+    text-align: center;
+    margin-block: .5em;
+}
+
+.favoritar {
+    align-self: flex-end;
+    font-size: 25px;
+}
