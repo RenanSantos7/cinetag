@@ -1,0 +1,18 @@
+.notificacao {
+    position: fixed;
+    bottom: 0;
+    right: 2rem;
+    padding: 1rem;
+    background-color: #000000dd;
+    color: var(--bg);
+    opacity: 0;
+    border: 1px solid white;
+    box-shadow: 5px 5px 15px rgba(0, 0,0, 0.5);
+    transition: bottom .6s ease-in-out,
+                opacity .6s ease-in-out;
+}
+
+.notificacao.aparente {
+    bottom: 2rem;
+    opacity: 1;
+}
