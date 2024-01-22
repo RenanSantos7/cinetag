@@ -7,21 +7,13 @@ import { FilmesContext } from '../../context/FilmesContext'
 import { useFavoritos } from '../../hooks/useFavoritos'
 
 export default function Card({ video }) {
-    const { 
+    const {
         favoritos, setFavoritos,
-        notificando, setNotificando,
-        msgNotificacao, setMsgNotificacao
     } = useContext(FilmesContext)
-    
+
     const [ehFavorito, setEhFavorito] = useState(favoritos.includes(video))
 
-    function notificar(msg) {
-        const tempoNotificacao = 3000
-        setNotificando(true)
-        setTimeout(setNotificando(false), tempoNotificacao)
-        setMsgNotificacao(`O filme "${video.titulo}" ${msg}!`)
-        console.log(`notifiquei: ${msgNotificacao}`);
-    }
+    const { notificar } = useFavoritos()
 
     function mudarFavorito() {
         setEhFavorito(!ehFavorito)
@@ -30,11 +22,11 @@ export default function Card({ video }) {
             setFavoritos(prev => prev.filter(
                 favorito => favorito.id !== video.id
             ))
-            notificar('foi removido dos favoritos')
+            notificar(`"${video.titulo}" foi removido dos favoritos`)
 
         } else {
             setFavoritos([...favoritos, video])
-            notificar('foi adicionado aos favoritos')
+            notificar(`"${video.titulo}" foi adicionado aos favoritos`)
         }
     }
 
