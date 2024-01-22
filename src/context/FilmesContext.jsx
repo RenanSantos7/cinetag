@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react'
-import videos from '@/json/db.json'
+import videos from '../json/db.json'
 
 export const FilmesContext = createContext()
 FilmesContext.displayName= 'Filmes'
@@ -13,7 +13,8 @@ export function FilmesProvider({children}) {
         <FilmesContext.Provider value={{
             favoritos, setFavoritos,
             notificando, setNotificando,
-            msgNotificacao, setMsgNotificacao
+            msgNotificacao, setMsgNotificacao,
+            videos
         }}>
             {children}
         </FilmesContext.Provider>

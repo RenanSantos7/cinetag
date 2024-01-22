@@ -8,7 +8,7 @@
 
 .rodape__wrapper {
     text-align: center;
-    color: var(--bg);
+    color: white;
     display: flex;
     flex-direction: column;
     gap: .5em;

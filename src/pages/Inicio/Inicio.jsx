@@ -2,9 +2,13 @@ import Banner from '../../components/Banner/Banner'
 import Titulo from '../../components/Titulo/Titulo'
 import Card from '../../components/Card/Card'
 import CardContainer from '../../components/CardContainer/CardContainer'
-import videos from '../../json/db.json'
+import { useContext } from 'react'
+import { FilmesContext } from '../../context/FilmesContext'
 
 export default function Inicio() {
+
+    const {videos} = useContext(FilmesContext)
+
     return (
         <>
             <Banner imagem='home' />

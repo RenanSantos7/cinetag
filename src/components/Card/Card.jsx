@@ -5,6 +5,7 @@ import { faHeart as iconeFavoritar } from '@fortawesome/free-regular-svg-icons'
 import { faHeart as iconeDesfavoritar } from '@fortawesome/free-solid-svg-icons'
 import { FilmesContext } from '../../context/FilmesContext'
 import { useFavoritos } from '../../hooks/useFavoritos'
+import { Link } from 'react-router-dom'
 
 export default function Card({ video }) {
     const {
@@ -32,8 +33,10 @@ export default function Card({ video }) {
 
     return (
         <article className={styles.container}>
-            <img src={video.capa} alt={video.titulo} className={styles.capa} />
-            <h2>{video.titulo}</h2>
+            <Link to={`/player/${video.id}`}>
+                <img src={video.capa} alt={video.titulo} className={styles.capa} />
+                <h2>{video.titulo}</h2>
+            </Link>
             <FontAwesomeIcon
                 icon={ehFavorito ? iconeDesfavoritar : iconeFavoritar}
                 className={styles.favoritar}

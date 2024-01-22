@@ -6,6 +6,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
+    border-radius: 0 0 8px 8px;
 }
 
 .container h2, .favoritar {
@@ -20,4 +22,11 @@
 .favoritar {
     align-self: flex-end;
     font-size: 25px;
+}
+
+.capa {
+    height: 425px;
+    object-fit: cover;
+    background-color: black;
+    border: 15px solid black;
 }

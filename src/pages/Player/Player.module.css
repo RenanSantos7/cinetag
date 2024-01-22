@@ -1,0 +1,6 @@
+.container {
+    --sizeRatio: min(5vw, 72px);
+    width: calc(16 * var(--sizeRatio));
+    height: calc(9 * var(--sizeRatio));
+    margin-inline: auto;
+}
