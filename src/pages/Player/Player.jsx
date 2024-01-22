@@ -4,6 +4,7 @@ import Titulo from '../../components/Titulo/Titulo'
 import { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { FilmesContext } from '../../context/FilmesContext'
+import NaoEncontrado from '../NaoEcontrado/NaoEncontrado'
 
 export default function Player() {
 
@@ -12,6 +13,10 @@ export default function Player() {
     const { videos } = useContext(FilmesContext)
 
     const video = videos.find(video => (video.id === Number(parametros.id)))
+
+    if (!video) {
+        return <NaoEncontrado />
+    }
 
     return (
         <>

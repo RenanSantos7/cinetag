@@ -1,0 +1,16 @@
+.container {
+    text-align: center;
+    height: calc(100dvh - 18rem - var(--cabecalhoHeight) - var(--rodapeHeight));
+}
+
+.container h2 {
+    font-size: 8rem;
+    margin-block: 1em 2rem;
+    opacity: .6;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    .container{
+        color: white;
+    }
+}

@@ -5,6 +5,9 @@
 	--bg: white;
 	--bg-card: #e2e2e2;
 	--color1: black;
+
+	--cabecalhoHeight: 5rem;
+	--rodapeHeight: 8rem;
 }
 
 @media screen and (prefers-color-scheme: dark) {
