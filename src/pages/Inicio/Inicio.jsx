@@ -7,7 +7,7 @@ import { FilmesContext } from '../../context/FilmesContext'
 
 export default function Inicio() {
 
-    const {videos} = useContext(FilmesContext)
+    const { videos } = useContext(FilmesContext)
 
     return (
         <>
