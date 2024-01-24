@@ -12,7 +12,9 @@ export default function Player() {
 
     const { videos } = useContext(FilmesContext)
 
-    const video = videos.find(video => (video.id === Number(parametros.id)))
+    const video = videos.find(video => (
+        video.id === Number(parametros.id)
+    ))
 
     if (!video) {
         return <NaoEncontrado />

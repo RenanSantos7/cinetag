@@ -1,13 +1,24 @@
-import { createContext, useState } from 'react'
-import videos from '../json/db.json'
+import { createContext, useEffect, useState } from 'react'
 
 export const FilmesContext = createContext()
-FilmesContext.displayName= 'Filmes'
+FilmesContext.displayName = 'Filmes'
 
-export function FilmesProvider({children}) {
+export function FilmesProvider({ children }) {
+    const [videos, setVideos] = useState([])
     const [favoritos, setFavoritos] = useState([])
     const [notificando, setNotificando] = useState(false)
     const [msgNotificacao, setMsgNotificacao] = useState('')
+
+    useEffect(() => {
+        try {
+            fetch('http://my-json-server.typicode.com/RenanSantos7/cinetag-api/videos')
+                .then(response => response.json())
+                .then(data => setVideos(data))
+        } catch {
+            console.log(error)
+        }
+    }, [])
+
 
     return (
         <FilmesContext.Provider value={{
