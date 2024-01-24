@@ -11,7 +11,7 @@ export function FilmesProvider({ children }) {
 
     useEffect(() => {
         try {
-            fetch('http://my-json-server.typicode.com/RenanSantos7/cinetag-api/videos')
+            fetch('https://my-json-server.typicode.com/RenanSantos7/cinetag-api/videos')
                 .then(response => response.json())
                 .then(data => setVideos(data))
         } catch {
