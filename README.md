@@ -1,13 +1,13 @@
 
-`![Print do Banner](./public/assets/print-banner.png)`
+![Print do Banner](./public/screenshot.png)
 
-# Olá Mundo
+# Cinetag
 
 Este é um projeto em React desenvolvido no curso *React: praticando React com Js* da [Alura](https://cursos.alura.com.br/).
 
 ## Tecnologias utilizadas
 
-- React (Create React App)
+- React (Vite)
 - React Router DOM
 - FontAwesome Icons
 
@@ -16,29 +16,32 @@ Este é um projeto em React desenvolvido no curso *React: praticando React com J
 - Rotas
 - Contextos
 - Hooks personalizados
+- Requisições
 
 ## Como acessar online
 
-O deploy do projeto foi feito pelo [Netilify](https://www.netlify.com/) e está disponível em https://ola-mundo-alura.netlify.app/
+O deploy do projeto foi feito pela [Vercel](https://vercel.com/) e está disponível em https://cinetag-renansantos7.vercel.app/
 
 ## Como rodar localmente
 
-Este projeto foi criado usando [Vite](https://github.com/facebook/create-react-app), portanto você pode seguir a documentação desse script para fazer deploy do site localmente.
+Este projeto foi criado usando [Vite](https://vite.dev), portanto você pode seguir a documentação desse script para fazer deploy do site localmente.
 
-No caso, primeiro você precisará baixar o projeto com o seguinte comando:
+No caso, primeiro você precisará baixar o projeto com executando o seguinte comando no terminal:
 
-```bash
+```
 git clone https://github.com/RenanSantos7/ola-mundo-react-router.git
 ```
 
-Agora, navegue até a raiz do projeto e abra um terminal. Nele rode o seguinte comando:
+Agora, instale as dependências:
 
-```bash
-npm start
+```
+npm i
 ```
 
-O navegador será aberto no endereço `http://localhost:3000` para que você possa visualizá-lo.
+E por fim rode o projeto com:
 
-## Licensa
+```
+npm run dev
+```
 
-O projeto está disponível publicamente com a licença [MIT](./LICENSE)
+O terminal mostrará o endereço para acessar o site no qual você pode clicar para abri-lo. Você também pode apertar `o` e depois `Enter` para fazer isso.
